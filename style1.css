@@ -1,0 +1,555 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 85%;
+    margin: auto;
+}
+.leftnav{
+    text-align: right;
+    flex:1;
+}
+.leftnav ul{
+    list-style-type: none;
+    display: inline-block;
+}
+.leftnav ul li{
+    display: inline-block;
+    margin-left:20px;
+}
+.leftnav ul li a{
+    text-decoration: none;
+   
+    font-size:16px;
+    color:whitesmoke;
+    text-transform: uppercase;
+    position: relative;
+}
+.leftnav ul li a::before{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #2860d8;
+    position: absolute;
+    top:100%;
+    color:white;
+    transition: .5s;
+    
+}
+.leftnav ul li a::after{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #e63e3e;
+    position: absolute;;
+    top:100%;
+    right: 0px;
+    color:white;
+    transition: .5s;   
+}
+.leftnav ul li:hover a::before{
+    width:50%;
+    transform: translateX(100%);
+}
+.leftnav ul li:hover a::after{
+    width:50%;
+    transform:translateX(-100%);
+}
+
+/*-----Second Section-----*/
+.secondSec{ 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+.rightCol{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.secondSec .about{
+    text-align: left;  
+    margin-bottom:30px; 
+}
+.rightCol img{
+    max-width: 100%;
+    padding:40px;
+}
+.leftCol p{
+    padding: 5px;
+    font-size: 18px;
+    color:whitesmoke;
+}
+.leftCol h1{
+    font-size: 45px;
+    line-height: 55px;
+    margin: 10px 0px;
+    color:whitesmoke;
+}
+.Background{
+    background: radial-gradient(rgba(31, 23, 23, 0.822),black);
+}
+.cart{
+    margin: 10px 8px;
+}
+.leftCol{
+    min-width: 300px;
+    flex-basis: 48%;
+    padding-left: 90px;
+}
+.leftCol .btn1{
+    padding: 13px 32px;
+    border-radius: 30px;
+    background-color: tomato;
+    text-decoration: none;
+    color:white;
+}
+   
+
+/*---------Button Animation------------*/
+/*
+.secondSec .leftCol a{
+    position: absolute;
+    bottom: 20%;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform-origin: center center;
+
+}
+.leftCol a span{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: block;
+    line-height: 60px;
+    background:repeating-linear-gradient(red,tomato); 
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius:30px;
+    text-transform: uppercase;
+    color:black;
+    font-weight: bolder;
+    transition:1s;
+    
+}
+.leftCol a span.front{
+    transform:rotateX(0deg) translateZ(20px);
+}
+.leftCol a:hover span.front{
+    transform:rotateX(-180deg) translateZ(20px);
+}
+.leftCol a span.back{
+    transform:rotateX(180deg) translateZ(20px);
+}
+.leftCol a:hover span.back{
+    transform:rotateX(0deg) translateZ(20px);
+}
+.leftCol a span.middle{
+    background: linear-gradient(to left, rgb(221, 73, 27),rgb(156, 10, 132));
+}
+.leftCol a span.middle::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transform:translateZ(-1px);
+}
+.leftCol a:hover span.middle{
+    transform: rotateX(-180deg);
+}*/
+/*--------------Featured Category---------------*/
+.smallContainer{
+    display: flex;
+    justify-content: center;
+}
+.col1{
+    flex-basis:24%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.col1 img{
+    width:100%;
+    padding:20px;
+}
+/*-----------------Featured Product-------------*/
+.title{
+    text-align: center;
+    position: relative;
+    margin:20px auto 60px;
+    line-height: 40px;
+}
+.title::after{
+    content: '';
+    width: 70px;
+    height: 4px;
+    background: #ff523b;
+    position: absolute;;
+    transform: translateX(-52%);
+    margin: 7px;
+    color:white;
+}
+
+.rating{
+    font-size: 14px;
+}
+.rating .fa{
+    color: #ff523b;
+}
+
+.container-Big{
+    width:74%;
+    min-height: 400px;
+    margin: 70px auto 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.container-Big .box{
+    background-color:white;
+    position: relative;
+    width: 23%;
+    height: 310px;
+    margin: 14px auto;
+}
+.container-Big .box .ImgBox{
+    position: relative;
+    overflow: hidden;
+}
+.container-Big .box .ImgBox img{
+    max-width: 100%;
+    transition: transform 2s;
+}
+.container-Big .box:hover .ImgBox img{
+    transform: scale(1.4);
+}
+.container-Big .box .details{
+    position: absolute;
+    top:15%;
+    bottom: 5%;
+    right: 5%;
+    left:5%;
+    max-height: 200px;
+    transform: scaleY(0);
+    transition: transform .5s;
+    background: rgba(31, 23, 23, 0.822);
+}
+.container-Big .box:hover .details{
+    transform: scaleY(1);
+}
+.container-Big .box .details .content{
+    position: absolute;
+    top:25%;
+    left:5%;
+    text-align: left;
+    color:white;
+}
+.content h3{
+    font-size: 15px;
+}
+/*---------Latest product ---------*/
+/*--only title is different otherwise whole CSS is same
+as featured products--*/
+.title1{
+    text-align: center;
+    position: relative;
+    line-height: 40px;
+}
+.title1::after{
+    content: '';
+    width: 70px;
+    height: 4px;
+    background: #ff523b;
+    position: absolute;;
+    transform: translateX(-52%);
+    margin: 7px;
+    color:white;
+}
+/*---------------------Offer-------------------*/
+.offer{
+    display:inline-flex;
+    margin-top: 100px;
+    background: radial-gradient(tomato,rgba(236, 126, 126, 0.822));
+    padding: 65px;
+    height: 500px;
+    
+}
+.offer .about{
+    width: 47%;
+    transform: translateY(25%);
+    margin-left: -100px;
+}
+.offer .Img img{
+    width: 70%;
+    margin-left:50px;
+    
+}
+.offer .about h4{
+    line-height: 19px;
+    font-size: 18px;
+}
+.offer .about small{
+    font-size: 14px;
+}
+.offer .about h1{
+    line-height: 95px;
+    font-size: 43px;
+}
+.offer .Img{
+    width: 50%;
+    padding-left: 50px;
+}
+.btn{
+    border: 2px solid black;
+    font-size: 19px;
+    padding: 8px 40px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.classbtn{
+    margin-top: 20px;
+}
+.matter{
+    text-align: center;
+    padding: 10px;
+}
+.matter img{
+    width:60px;
+    border-radius: 50%;
+    margin-top: 20px;
+    
+}
+.matter h3{
+    margin-top: 10px;
+    font-weight: bolder;
+    color:rgb(17, 17, 17);
+}
+.matter p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:rgb(83, 79, 79);
+}
+.testimonial .container-Big .box{
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    transition: transform .5s;
+}
+.testimonial .container-Big .box:hover{
+    transform:translateY(-15px);
+}
+.testimonial .rating{
+    margin-top: 10px;
+}
+.matter .fa-quote-left{
+    font-size: 30px;
+    color:tomato;
+}
+/*-----------------------brands--------------------*/
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.brands .col3{
+    margin:auto 10px;
+    width:160px;
+}
+.brands .col3 img{
+    width:100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+.brands .col3 img:hover{
+    filter:grayscale(0%);
+}
+.brands{
+    margin:40px auto;
+    max-width: 80%;
+}
+
+/*------------footer ---------------*/
+.footer{
+    background: black;
+    margin-top: 50px;
+    
+}
+
+
+.footer .container .rows{
+    display: flex;
+    min-height: 250px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 13%;
+}
+.footer p{
+    color:rgb(107, 101, 101);
+    font-size: 14px;
+}
+.footer h3{
+    color:white;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 16px;
+}
+.footer li{
+    color:rgb(107, 101, 101);
+    list-style: none;
+    font-size: 14px;
+    padding: 2px;
+}
+.footer-col-1{
+    flex-basis: 60%;
+
+}
+.footer-col-2{
+    flex-basis: 60%;
+    text-align: center;
+    padding: 10px;
+}
+.footer-col-2 img{
+    width:60%;
+    padding: 10px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 8%;
+    text-align: center;
+}
+.footer .app-logo{
+    display: flex;
+    margin-top: 20px;
+}
+.footer .app-logo img{
+    width:40%;
+    margin-right: 12px;
+}
+.Copy{
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+}
+.burger{
+    position: absolute;
+    cursor: pointer;
+    top: 10%;
+    right: 5%;
+    display: none;
+}
+.line{
+    width: 34px;
+    background-color: white;
+    height: 5px;
+    margin: 5px 6px;
+}
+.footer hr{
+    background-color:rgb(136, 124, 124);
+    border:none;
+    height: 1px;
+}
+
+
+ @media only screen and (max-width:1238px){
+
+    .secondSec .about h1{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .secondSec .about p{
+        font-size: 18px;
+    }
+    .container-Big .box{
+
+        margin: 33px auto;
+    }
+    .container-Big .box .details{
+        position: relative;
+        transform: scaleY(1);
+        background-color: white;
+        color:black;
+        left:-7px;
+        right: 2px;
+        top:2px;
+    } 
+    .container-Big .box .details .content{
+        
+        bottom: 5px;
+        font-size: 12px;
+    }
+    .content h3{
+        font-size: 12px;
+    }
+    .content .fa{
+        font-size: 10px;
+    }
+    .content h4{
+        font-size: 12px;
+    }
+    .container-Big .box .details .content{
+        color:black;
+    }
+   /*-----------------Offer---------------*/
+    .offer .about h1{
+        font-size: 35px;
+    }
+    .offer .about{
+        margin: 0;
+    }
+    .offer .Img{
+        padding-top: 9%;
+    }
+    /*-------Testimonial--------*/
+    .testimonial .container-Big .box{
+        width: 30%;
+    }
+    /*----------Footer---------*/
+    .footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+        min-width: 13%;
+    }
+    footer .app-logo img {
+        width: 30%;
+    }
+ }
+
+ @media only screen and (max-width:900px){
+    .burger{
+        display: block;
+        top:8%;
+    }
+    .navbar .leftnav ul{
+        position: absolute;
+        top:200px;
+        background:white;
+        
+    }
+    .navbar .leftnav ul li a{
+        color:black;
+        
+    }
+
+
+ }
+
+
